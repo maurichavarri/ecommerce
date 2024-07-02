@@ -1,0 +1,113 @@
+/*----- CONTEINERS -----*/
+
+#caja-padre {
+    width: 80%;
+    margin: auto;
+    margin-top: 3rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px grey;
+}
+
+#caja-titulo {
+    text-align: center;
+    padding: 10px;
+}
+
+#caja-formulario {
+    text-align: center;
+    padding: 10px;
+}
+
+.caja-input {
+    margin-bottom: 1rem;
+}
+
+.caja-aviso {
+    padding: 10px;
+    text-align: center;
+}
+
+/*----- ELEMENTOS -----*/
+
+label{
+    font-size: medium;
+}
+
+textarea,
+input{
+    width: 250px;
+    border: grey solid 1px;
+    border-radius: 5px;
+    font-size: medium;
+}
+
+button{
+    width: 80px;
+    background-color: #076eff;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.2s;
+    font-size: medium;
+}
+
+button:hover{
+    background-color: #2d85ff;
+}
+
+.aviso {
+    color: rgb(255, 115, 0);
+}
+
+#aviso-error {
+    color: rgb(255, 115, 0);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+}
+
+@media(min-width:800px){
+    #caja-padre{
+        width: 70%;
+    }
+
+    textarea,
+    input{
+        width: 300px;
+    }
+}
+
+@media(min-width:1024px){
+    #caja-padre{
+        width: 40%;
+        margin-top: 6rem;
+    }
+
+    label {
+        font-size: large;
+    }
+
+    textarea,
+    input{
+        width: 500px;
+        font-size: large;
+    }
+
+    select{
+        font-size: large;
+    }
+
+    button{
+        width: 150px;
+        font-size: large;
+    }
+
+    a{
+        font-size: large;
+    }
+}

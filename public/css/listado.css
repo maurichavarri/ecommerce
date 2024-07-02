@@ -1,0 +1,127 @@
+/*--------------- Sección "aviso" ---------------*/
+
+.caja-aviso {
+    margin-top: 8rem;
+    text-align: center;
+}
+
+.aviso {
+    color: rgb(255, 115, 0);
+}
+
+.caja-aviso img{
+    width: 30%;
+}
+
+/*-----------------------------------------------*/
+
+#caja-padre {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.caja-hija {
+    width: 45%;
+    margin-top: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px grey;
+    background-color: white;
+}
+
+/*.caja-imagen {
+
+}*/
+
+.caja-info {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 8px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.caja-nombre,
+.caja-descripcion,
+.caja-precio,
+.caja-comprar {
+    padding: 4px;
+}
+
+.caja-precio {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comprar {
+    width: 50%;
+    cursor: pointer;
+    background-color: rgb(255, 115, 0);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.comprar:hover{
+    background-color: rgb(255, 145, 0);
+}
+
+.comprar {
+    color: white;
+}
+
+.imagen {
+    width: 100%; /* Hace que la imagen ocupe el 100% de la caja contenedora */
+    aspect-ratio: 4/3; /* Le da a la imagen una relacion de aspecto de 4:3 */
+    object-fit: cover; /* Hace que la imagen no se estire o estreche */
+    border-radius: 5px 5px 0px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+@media(min-width:480px){
+    .caja-aviso img{
+        width: 15%;
+    }
+}
+
+@media(min-width:640px){
+    #caja-padre{
+        width: 75%;
+    }
+
+    .caja-hija{
+        width: 30%;
+        margin-top: 2rem;
+    }
+}
+
+@media(min-width:1024px){
+    /*.caja-hija{
+        transition: 0.5s;
+    }
+
+    .caja-hija:hover{
+        transform: scale(0.97);
+    }*/
+
+    .aviso {
+        font-size: large;
+    }
+}
+
+@media(min-width: 1366px){
+    #caja-padre{
+        width: 60%;
+    }
+
+    .caja-hija{
+        width: 22%;
+        margin-top: 4rem;
+    }
+}

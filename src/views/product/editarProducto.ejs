@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Incluimos el Head -->
+<%- include('../partials/head.ejs', {fileCss: 'editar'}) %>
+
+<body>
+    
+    <!-- Incluimos el Header -->
+    <%- include('../partials/header') %>
+
+    <main>
+
+        <section id="caja-padre">
+            <div id="caja-titulo">
+                <h1>PRODUCTOS</h1>
+            </div>
+            <br>
+            <a href="/producto/administrar">
+                <div id="caja-boton-volver">Volver al Panel de Administración</div>
+            </a>
+            <br>
+            <% if (categorias.length != 0) { %>
+                <% if (productos.length != 0) { %>
+                    <% productos.forEach((producto) => { %>
+                        <div class="caja-categoria">
+                            <div class="caja-imagen">
+                                <img src="/img/productos/<%= producto.img %>" alt="imagen producto">
+                            </div>
+                            <div class="caja-nombre">
+                                <%= producto.nombre %>
+                            </div>
+                            <div class="caja-botones">
+                                <a href="/producto/administrar/editar-producto/<%= producto.producto_id %>"><i class="fa-solid fa-pencil"></i></a>
+                                <a href="/producto/administrar/archivar-producto/<%= producto.producto_id %>"><i class="fa-solid fa-ban"></i></a>
+                            </div>
+                        </div>
+                    <% }) %>
+                <% } else { %>
+                    <script>
+                        let aviso = document.createElement('h3');
+                        aviso.innerHTML = "No hay productos registrados o activos."
+                        aviso.classList.add('aviso');
+                        document.getElementById('caja-titulo').appendChild(aviso);
+                    </script>
+                <% } %>
+            <% } else { %>
+                <script>
+                    let aviso = document.createElement('h3');
+                    aviso.innerHTML = "No hay categorías ni productos registrados o activos."
+                    aviso.classList.add('aviso');
+                    document.getElementById('caja-titulo').appendChild(aviso);
+                </script>
+            <% } %>
+        </section>
+
+        <% if (productosBorrados.length != 0) { %>
+            <section id="caja-padre">
+                <div id="caja-titulo">
+                    <h1>PRODUCTOS ARCHIVADOS</h1>
+                </div>
+                <br>
+                <% productosBorrados.forEach((producto) => { %>
+                    <div class="caja-categoria">
+                        <div class="caja-imagen">
+                            <img src="/img/productos/<%= producto.img %>" alt="imagen producto">
+                        </div>
+                        <div class="caja-nombre">
+                            <%= producto.nombre %>
+                        </div>
+                        <div class="caja-botones">
+                            <a href="/producto/administrar/restaurar-producto/<%= producto.producto_id %>"><i class="fa-solid fa-arrows-rotate"></i></a>
+                            <a href="/producto/administrar/borrar-producto/<%= producto.producto_id %>" class="boton-eliminar"><i class="fa-regular fa-trash-can"></i></a>
+                        </div>
+                    </div>
+                <% }) %>
+            </section>
+        <% } %>
+
+    </main>
+
+</body>
+</html>

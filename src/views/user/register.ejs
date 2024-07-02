@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Incluimos el Head y mandamos un objeto literal con el css que usaremos -->
+<%- include('../partials/head.ejs', {fileCss: 'formulario'}) %>
+
+<body>
+    
+    <!-- Incluimos el Header -->
+    <%- include('../partials/header') %>
+
+    <main>
+        <div id="caja-padre">
+            <div id="caja-titulo">
+                <h1 id="titulo">Registrarse</h1>
+                <hr>
+            </div>
+            <form id="caja-formulario" action="/usuario/register" method="POST">
+
+                <div class="caja-input">
+                    <label for="username">Nombre de Usuario</label><br>
+                    <input type="text" name="username" id="username">
+                </div>
+    
+                <div class="caja-input">
+                    <label for="contrasenia">Contraseña</label><br>
+                    <input type="password" name="contrasenia" id="contrasenia">
+                </div>
+
+                <div class="caja-input">
+                    <label for="clave">Clave de acceso</label><br>
+                    <input type="text" name="clave" id="clave">
+                </div>
+    
+                <button type="submit">Crear</button>
+                <br><br>
+                <a href="/usuario/login">¿Ya tienes una cuenta? Inicia sesión.</a>
+
+                <% if (locals.errors) { %>
+                    <br><br>
+                    <div class="caja-aviso">
+                        <h4 class="aviso"><%= errors.msg %></h4>
+                    </div>
+                <% } %>
+    
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

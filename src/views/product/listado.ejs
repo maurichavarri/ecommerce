@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Incluimos el Head -->
+<%- include('../partials/head.ejs', {fileCss: 'listado'}) %>
+
+<body>
+    
+    <!-- Incluimos el Header -->
+    <%- include('../partials/header') %>
+
+    <main>
+
+        <section id="caja-padre">
+            <% if (productos.length != 0) { %>
+                <% productos.forEach((producto) => { %>
+                    <article class="caja-hija">
+                        <p class="id" style="display: none;"><%= producto.producto_id %></p>                            
+                        <div class="caja-imagen">
+                            <img class="imagen" src="/img/productos/<%= producto.img %>" alt="imagen producto">
+                        </div>
+                        <div class="caja-info">
+                            <div class="caja-nombre">
+                                <h3><%= producto.nombre %></h3>
+                            </div><hr>
+                            <div class="caja-descripcion">
+                                <p class="descripcion"><%= producto.descripcion %></p>
+                            </div>
+                            <div class="caja-precio">
+                                <h3 class="precio">$<%= producto.precio %></h3>
+                                <button class="comprar"></button>
+                            </div>
+                        </div>
+                    </article>
+                <% }) %>
+            <% } else { %>
+                <div class="caja-aviso">
+                    <h3 class="aviso">No hay productos registrados en esta categoría.</h3><br>
+                    <img src="/img/food-icon.png" alt="icono-comida">
+                </div>
+            <% } %>
+        </section>
+        
+    </main>
+
+    <!-- Incluimos el Footer -->
+    <%- include('../partials/footer') %>
+
+</body>
+</html>

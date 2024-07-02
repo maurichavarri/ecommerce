@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Incluimos el Head -->
+<%- include('../partials/head.ejs', {fileCss: 'administrar'}) %>
+
+<body>
+    
+    <!-- Incluimos el Header -->
+    <%- include('../partials/header') %>
+
+    <main>
+
+        <div id="caja-titulo">
+            <h2>Panel de Administración</h2>
+        </div>
+        <section id="caja-padre">
+
+            <div class="caja-hija">
+                <div class="caja-titulo">
+                    <h2 class="titulo">Categorias</h2>
+                </div>
+                <div class="caja-botones">
+                    <a href="/producto/administrar/agregar-categoria"><div class="boton">Agregar</div></a>
+                    <a href="/producto/administrar/editar-categoria"><div class="boton">Ver Listado</div></a>
+                </div>
+            </div>
+
+            <div class="caja-hija">
+                <div class="caja-titulo">
+                    <h2 class="titulo">Productos</h2>
+                </div>
+                <div class="caja-botones">
+                    <a href="/producto/administrar/agregar-producto"><div class="boton">Agregar</div></a>
+                    <a href="/producto/administrar/editar-producto"><div class="boton">Ver Listado</div></a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+</html>

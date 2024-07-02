@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Incluimos el Head -->
+<%- include('../partials/head.ejs', {fileCss: 'carrito'}) %>
+
+<body>
+    
+    <!-- Incluimos el Header -->
+    <%- include('../partials/header') %>
+
+    <main id="main-carrito">
+        <div id="titulo-carrito" style="display: none;">CARRITO DE COMPRAS</div>
+        <section id="caja-productos-carrito">
+            <!--<button id="clean-carrito">Limpiar Carrito</button>-->
+        </section>
+        <section id="caja-resultados-carrito" style="display: none;">
+            <div id="caja-total-texto">TOTAL</div>
+            <div id="caja-total-num"></div>
+        </section>
+        <section id="caja-comprar-wpp" style="display: none;">
+            <h3>Enviar a WhatsApp</h3>
+            <img src="/img/icono-wpp.png" alt="">
+        </section>
+        <section id="caja-aviso">
+            <h3 id="aviso">El carrito está vacío.</h3><br>
+            <img src="/img/food-icon.png" alt="icono-comida">
+        </section>
+    </main>
+
+    <!-- Incluimos el Footer -->
+    <%- include('../partials/footer') %>
+
+</body>
+</html>

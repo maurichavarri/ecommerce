@@ -1,0 +1,156 @@
+.displayNone {
+    display: none;
+}
+
+/*-------------- Estilos del aviso, cuando el carrito está vacío -----------------*/
+
+#caja-aviso {
+    margin: auto;
+    margin-top: 8rem;
+    text-align: center;
+}
+
+#caja-aviso h3 {
+    color: rgb(255, 115, 0);
+}
+
+#caja-aviso img{
+    width: 30%;
+}
+
+/*--------------------------------------------------------------------------------*/
+
+#titulo-carrito {
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px grey;
+    text-align: center;
+    font-size: large;
+    background-color: white;
+}
+
+#caja-productos-carrito,
+#caja-resultados-carrito {
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+#caja-resultados-carrito {
+    justify-content: center;
+    background-color: rgb(255, 115, 0);
+    border-radius: 5px;
+}
+
+#caja-total-texto,
+#caja-total-num {
+    padding: 10px;
+    color: white;
+}
+
+#caja-total-num {
+    padding: 10px;
+}
+
+#caja-comprar-wpp {
+    width: 80%;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 1rem;
+    text-align: center;
+    color: white;
+    justify-content:center;
+    transition: 0.5s;
+    cursor: pointer;;
+}
+
+#caja-comprar-wpp:hover {
+    transform: scale(0.97);
+}
+
+#caja-comprar-wpp img {
+    width: 25px;
+    filter: invert(1);
+    margin-left: 1rem;
+}
+
+article {
+    padding: 10px;
+    display: flex;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px grey;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.caja-nombre {
+    width: 50%;
+}
+
+.caja-precio {
+    width: 20%;
+}
+
+.caja-cantidad {
+    width: 10%;
+    background-color: rgb(168, 168, 168);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.caja-botones-cantidad {
+    width: 20%;
+}
+
+.boton1,
+.boton2 {
+    width: 50%;
+}
+
+@media(min-width: 480px){
+    #caja-aviso img{
+        width: 15%;
+    }
+}
+
+@media(min-width: 800px){
+    #titulo-carrito {
+        margin-top: 3rem;
+    }
+
+    #titulo-carrito,
+    #caja-productos-carrito,
+    #caja-resultados-carrito,
+    #caja-comprar-wpp {
+        width: 60%;
+    }
+}
+
+@media(min-width: 1024px){
+    #caja-aviso img{
+        width: 8%;
+    }
+
+    #titulo-carrito,
+    #caja-productos-carrito,
+    #caja-resultados-carrito,
+    #caja-comprar-wpp {
+        width: 40%;
+    }
+
+    .caja-nombre,
+    .caja-precio,
+    .caja-cantidad,
+    #caja-total-texto,
+    #caja-total-num,
+    #caja-comprar-wpp,
+    h3#aviso {
+        font-size: large;
+    }
+}

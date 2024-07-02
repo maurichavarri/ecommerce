@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Incluimos el Head -->
+<%- include('../partials/head.ejs', {fileCss: 'listado'}) %>
+
+<body>
+    
+    <!-- Incluimos el Header -->
+    <%- include('../partials/header') %>
+
+    <main>
+
+        <section id="caja-padre">
+            <% if (categorias.length != 0) { %> 
+                <% categorias.forEach((categ) => { %>
+                    <article class="caja-hija">                            
+                        <a href="/producto/listado/<%= categ.categoria_id %>">
+                            <div class="caja-imagen">
+                                <img class="imagen" src="/img/categorias/<%= categ.img %>" alt="imagen categoria">
+                            </div>
+                            <div class="caja-info">
+                                <h3><%= categ.nombre %></h3>
+                            </div>
+                        </a>
+                    </article>
+                <% }) %>
+            <% } else { %>
+                <div class="caja-aviso">
+                    <h3 class="aviso">No hay nada en el menú.</h3><br>
+                    <img src="/img/food-icon.png" alt="icono-comida">
+                </div>
+            <% } %>
+        </section>
+        
+    </main>
+
+    <!-- Incluimos el Footer -->
+    <%- include('../partials/footer') %>
+
+</body>
+</html>

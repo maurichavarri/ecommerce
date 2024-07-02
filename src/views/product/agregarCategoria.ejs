@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Incluimos el Head -->
+<%- include('../partials/head.ejs', {fileCss: 'formulario'}) %>
+
+<body>
+    
+    <!-- Incluimos el Header -->
+    <%- include('../partials/header') %>
+
+    <main>
+
+        <section id="caja-padre">
+            <div id="caja-titulo">
+                <h1>AGREGAR CATEGORIA</h1>
+            </div>
+            <form id="caja-formulario" action="/producto/administrar/agregar-categoria" method="POST" enctype="multipart/form-data">
+
+                <div class="caja-input">
+                    <label for="nombreCategoria">Nombre</label><br>
+                    <input type="text" name="nombreCategoria" id="nombreCategoria" maxlength="49">
+                </div>
+
+                <div class="caja-input">
+                    <label for="imagen">Seleccione una imagen</label><br>
+                    <input class="imagen" type="file" name="imagen" id="imagen" accept="image/jpeg, image/png">
+                </div>
+
+                <br>
+
+                <button type="submit">Agregar</button>
+
+                <br><br>
+
+                <% if (locals.errors) { %>
+                    <h4 id="aviso-error">No se completó el formulario correctamente.</h4>
+                <% } %>
+
+            </form>
+        </section>
+
+    </main>
+
+</body>
+</html>

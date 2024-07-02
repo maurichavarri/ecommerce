@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Incluimos el Head -->
+<%- include('../partials/head.ejs', {fileCss: 'formulario'}) %>
+
+<body>
+    
+    <!-- Incluimos el Header -->
+    <%- include('../partials/header') %>
+
+    <main>
+
+        <section id="caja-padre">
+            <div id="caja-titulo">
+                <h1>EDITAR PRODUCTO</h1>
+            </div>
+            <form id="caja-formulario" action="/producto/administrar/editar-producto/<%= producto.producto_id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+
+                <div class="caja-input">
+                    <label for="nombreProducto">Nombre</label><br>
+                    <input type="text" name="nombreProducto" id="nombreProducto" value="<%= producto.nombre %>" maxlength="49">
+                </div>
+
+                <div class="caja-input">
+                    <label for="descripcion">Ingredientes / Descripción</label><br>
+                    <textarea name="descripcion" id="descripcion" maxlength="199"><%= producto.descripcion %></textarea>
+                </div>
+
+                <div class="caja-input">
+                    <label for="precio">Precio</label><br>
+                    <input type="number" name="precio" id="precio" value="<%= producto.precio %>">
+                </div>
+
+                <div class="caja-input">
+                    <label for="categoria">Categoría</label>
+                    <select name="categoria" id="categoria">
+                        <% categorias.forEach((categ) => { %>
+                            <% if (categ.categoria_id === producto.categoria_id) { %>
+                                <option value=<%= categ.categoria_id %> selected>
+                                    <%= categ.nombre %>
+                                </option>
+                            <% } else { %>
+                                <option value=<%= categ.categoria_id %>>
+                                    <%= categ.nombre %>
+                                </option>
+                            <% } %>
+                        <% }) %>
+                    </select>
+                </div>
+
+                <div class="caja-input">
+                    <label for="imagen">Seleccione una imagen (Opcional)</label><br>
+                    <input class="imagen" type="file" name="imagen" id="imagen" accept="image/jpeg, image/png" value="<%= producto.img %>">
+                </div>
+
+                <br>
+
+                <button type="submit">Actualizar</button>
+
+                <% if (locals.errors) { %>
+                    <br><br>
+                    <h4 id="aviso-error">No se completó el formulario correctamente.</h4>
+                <% } %>
+
+            </form>
+        </section>
+
+    </main>
+
+</body>
+</html>

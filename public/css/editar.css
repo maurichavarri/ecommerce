@@ -1,0 +1,125 @@
+#caja-padre {
+    width: 80%;
+    margin: auto;
+    margin-top: 4rem;
+}
+
+#caja-titulo,
+#caja-boton-volver {
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 0px grey;
+}
+
+#caja-padre a {
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+}
+
+#caja-boton-volver {
+    background-color: #076eff;
+    transition: 0.2s;
+}
+
+#caja-boton-volver:hover {
+    background-color: #2d85ff;
+}
+
+.caja-categoria {
+    display: flex;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px grey;
+    margin-bottom: 0.5rem;
+}
+
+.caja-imagen {
+    width: 30%;
+    padding: 5px 5px 0px 5px;
+}
+
+.caja-nombre {
+    width: 60%;
+    font-size: large;
+    margin: auto;
+    text-align: center;
+}
+
+.caja-botones {
+    width: 30%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.caja-imagen img {
+    width: 100%; /* Hace que la imagen ocupe el 100% de la caja contenedora */
+    aspect-ratio: 1/1; /* Le da a la imagen una relacion de aspecto de 4:3 */
+    object-fit: cover; /* Hace que la imagen no se estire o estreche */
+    border-radius: 5px;
+}
+
+.caja-botones a {
+    width: 45%;
+    background-color: grey;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex; /* Para que el <a> se comporte como un contenedor flexible */
+    justify-content: center; /* Centrado horizontal dentro del <a> */
+    align-items: center; /* Centrado vertical dentro del <a> */
+}
+
+.caja-botones .boton-eliminar {
+    background-color: red;
+}
+
+i {
+    color: white;
+    font-size: large;
+}
+
+.caja-aviso {
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 5px 0px grey;
+    padding: 10px;
+}
+
+.aviso {
+    color: rgb(255, 115, 0);
+}
+
+@media(min-width:800px){
+    #caja-padre{
+        width: 60%;
+    }
+}
+
+@media(min-width:1024px){
+    #caja-padre{
+        width: 50%;
+    }
+
+    .caja-imagen img {
+        width: 60%;
+    }
+
+    .caja-nombre {
+        font-size: x-large;
+    }
+
+    i {
+        font-size: x-large;
+    }
+}
+
+@media(min-width:1366px){
+    #caja-padre{
+        width: 40%;
+    }
+}
