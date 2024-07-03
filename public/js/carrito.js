@@ -359,7 +359,7 @@ window.addEventListener('load', () => {
             let msjCodificado = encodeURIComponent(msj);
 
             // Guardamos en una variable el nro del negocio.
-            let nroTelefono = 5493856188772;
+            let nroTelefono = 3854748843;
 
             // Y finalmente, abrimos una nueva ventana, al WhatsApp del negocio, con el mensaje del pedido.
             window.open("https://api.whatsapp.com/send?phone=" + nroTelefono + "&text=" + msjCodificado);
