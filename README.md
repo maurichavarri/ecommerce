@@ -12,11 +12,11 @@ Sobre sus funcionalidades, podemos dividirlas en 2 partes:
 
 - La segunda, es permitir añadir, actualizar y borrar (CRUD) categorías/productos. Solo los usuarios administradores tendrán acceso a esta sección.
 
-## Detalles Tecnicos
+## Detalles Técnicos
 
-Para el back-end usamos: Node.js y MySql.
+Para el Back-End usamos: Node.js (Entorno de ejecución de JavaScript), Express (Framework), Sequelize (ORM) y MySql (Base de datos relacional). 
 
-Para el front-end usamos: JavaScript, CSS y HTML (acompañado del motor de plantillas EJS).
+Para el Front-End usamos: JavaScript, CSS y HTML (acompañado del motor de plantillas EJS).
 
 ## Guia de instalación
 
