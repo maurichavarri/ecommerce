@@ -36,4 +36,4 @@ Al momento de crear nuestro usuario, nos pedirá una "clave de acceso", el valor
 
 ## Video Demostrativo (Enlace)
 
-https://drive.google.com/file/d/1spKinad8baNBrjndXSwYHzceXK0eh3vD/view?usp=sharing
+https://drive.google.com/file/d/1NhmNhVgQvUl-cQeuwKFpISFbe0eJAAxW/view?usp=drive_link
